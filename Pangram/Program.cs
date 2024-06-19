@@ -1,13 +1,21 @@
-﻿Console.WriteLine("Welcome to Pangram Checker!\n\nEnter the phrase you would like to validate:");
+﻿Console.WriteLine("Welcome to Pangram Checker!\n");
 
+Console.WriteLine("Enter the phrase you would like to validate:");
 string input = Console.ReadLine() ?? String.Empty;
 
 if (IsPangram(input))
-{ }
+{
+    Console.WriteLine("The input phrase is a Pangram!\n");
+}
+else
+{
+    Console.WriteLine("This input phrase is not a Panagram.\n");
+}
+
 
 bool IsPangram(string phrase)
 {
-    if (input.Length < 26)
+    if (phrase.Length < 26)
     {
         return false;
     }
